@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.postcss';
-	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
+	import { AppShell, AppBar, Avatar } from '@skeletonlabs/skeleton';
 
 	// Highlight JS
 	import hljs from 'highlight.js/lib/core';
@@ -20,6 +20,8 @@
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
+	import { LightSwitch } from '@skeletonlabs/skeleton';
+	import Theme from '$lib/compoenents/theme.svelte';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 
@@ -29,17 +31,24 @@
 		<!-- App Bar -->
 		<AppBar>
 			<svelte:fragment slot="lead">
-				<strong class="text-xl uppercase">Josh Guarino</strong>
-			</svelte:fragment>
-			<svelte:fragment slot="trail">
-				<a
-					class="btn btn-sm variant-ghost-surface"
-					href="https://discord.gg/EXqV7W8MtY"
-					target="_blank"
-					rel="noreferrer"
-				>
-					Discord
+				<a 
+					class="btn btn-sm"
+					href="/"
+					target="_self"
+					rel="noreferrer">
+					<strong class="text-xl uppercase"><Avatar initials="JG" background="variant-soft-primary" /></strong>
 				</a>
+			</svelte:fragment>
+			<svelte:fragment slot="trail">				
+				<div>
+					<button class="btn hover:variant-soft-primary">Terminal</button>
+				</div>
+				<div>
+					<Theme></Theme>
+				</div>
+				<div>
+					<LightSwitch />
+				</div>
 				<a
 					class="btn btn-sm variant-ghost-surface"
 					href="https://www.linkedin.com/in/josh-guarino/"
@@ -55,14 +64,6 @@
 					rel="noreferrer"
 				>
 					GitHub
-				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface"
-					href="/test"
-					target="_blank"
-					rel="noreferrer"
-				>
-					TEST
 				</a>
 			</svelte:fragment>
 		</AppBar>
