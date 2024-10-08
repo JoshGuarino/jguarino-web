@@ -31,13 +31,7 @@
 		<!-- App Bar -->
 		<AppBar>
 			<svelte:fragment slot="lead">
-				<a 
-					class="btn btn-sm"
-					href="/"
-					target="_self"
-					rel="noreferrer">
 					<strong class="text-xl uppercase"><Avatar initials="JG" background="variant-soft-primary" /></strong>
-				</a>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">				
 				<div>
