@@ -1,7 +1,5 @@
 <script lang="ts">
-    // code goes here
+	// code goes here
 </script>
 
-<div>
-    html goes here
-</div>
+<div>html goes here</div>

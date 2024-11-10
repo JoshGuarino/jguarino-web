@@ -2,19 +2,19 @@
 	import { theme } from '$lib/stores/theme.js';
 	import { popup, type PopupSettings } from '@skeletonlabs/skeleton';
 
-	let currentTheme = $theme
+	let currentTheme = $theme;
 	let themes = [
-		['skeleton', "💀"],
-		['wintry', "🌨️"],
-		['modern', "🤖"],
-		['rocket', "🚀"],
-		['seafoam', "🧜‍♀️"],
-		['vintage', "📺"],
-		['sahara', "🏜️"],
-		['hamlindigo', "👔"],
-		['gold-nouveau', "💫"],
-		['crimson', "⭕"],
-	]
+		['skeleton', '💀'],
+		['wintry', '🌨️'],
+		['modern', '🤖'],
+		['rocket', '🚀'],
+		['seafoam', '🧜‍♀️'],
+		['vintage', '📺'],
+		['sahara', '🏜️'],
+		['hamlindigo', '👔'],
+		['gold-nouveau', '💫'],
+		['crimson', '⭕']
+	];
 
 	const popupTheme: PopupSettings = {
 		event: 'click',
@@ -23,16 +23,16 @@
 	};
 
 	function setThemeStore(value: string) {
-		theme.set(value)
+		theme.set(value);
 	}
 
 	function setTheme(newTheme: string) {
-		let currentThemeElement = document.getElementById($theme)
-		let newThemeElement = document.getElementById(newTheme)
-		currentThemeElement?.classList.remove('bg-primary-active-token')
-		newThemeElement?.classList.add('bg-primary-active-token')
+		let currentThemeElement = document.getElementById($theme);
+		let newThemeElement = document.getElementById(newTheme);
+		currentThemeElement?.classList.remove('bg-primary-active-token');
+		newThemeElement?.classList.add('bg-primary-active-token');
 		document.body.setAttribute('data-theme', newTheme);
-		setThemeStore(newTheme)
+		setThemeStore(newTheme);
 	}
 </script>
 
@@ -47,11 +47,13 @@
 		<ul>
 			{#each themes as theme}
 				<li>
-					<button 
-						class={theme[0] === currentTheme ? "bg-primary-active-token option w-full h-full" : "option w-full h-full"} 
-						type="button" 
-						name="theme" 
-						id={theme[0]} 
+					<button
+						class={theme[0] === currentTheme
+							? 'bg-primary-active-token option w-full h-full'
+							: 'option w-full h-full'}
+						type="button"
+						name="theme"
+						id={theme[0]}
 						on:click={() => setTheme(theme[0])}
 					>
 						<span>
