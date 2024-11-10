@@ -2,4 +2,6 @@
 	// code goes here
 </script>
 
-<div>html goes here</div>
+<div>
+	<button class="btn hover:variant-soft-primary">Terminal</button>
+</div>

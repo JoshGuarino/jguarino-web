@@ -3,6 +3,7 @@
 	import { AppShell, AppBar, Avatar } from '@skeletonlabs/skeleton';
 	import { LightSwitch } from '@skeletonlabs/skeleton';
 	import Theme from '$lib/compoenents/theme.svelte';
+	import Terminal from '$lib/compoenents/terminal.svelte';
 
 	// Highlight JS
 	import hljs from 'highlight.js/lib/core';
@@ -31,11 +32,13 @@
 		<!-- App Bar -->
 		<AppBar>
 			<svelte:fragment slot="lead">
-					<strong class="text-xl uppercase"><Avatar initials="JG" background="variant-soft-primary" /></strong>
+				<strong class="text-xl uppercase"
+					><Avatar initials="JG" background="variant-soft-primary" /></strong
+				>
 			</svelte:fragment>
-			<svelte:fragment slot="trail">				
+			<svelte:fragment slot="trail">
 				<div>
-					<button class="btn hover:variant-soft-primary">Terminal</button>
+					<Terminal></Terminal>
 				</div>
 				<div>
 					<Theme></Theme>
