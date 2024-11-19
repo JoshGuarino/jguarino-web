@@ -1,3 +1,3 @@
 import { writable } from 'svelte/store';
 
-export const theme = writable('skeleton');
+export const theme = writable('crimson');
