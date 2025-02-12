@@ -20,6 +20,7 @@
 		event: 'click',
 		target: 'popupTheme',
 		placement: 'bottom'
+		//closeQuery: ''
 	};
 
 	function setThemeStore(value: string) {
